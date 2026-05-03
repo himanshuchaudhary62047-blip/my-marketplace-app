@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Give permission to gradlew
+        run: chmod +x android/gradlew
+
       - name: Build APK
         run: |
           cd android
