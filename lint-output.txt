@@ -1,0 +1,29 @@
+
+> smart-agri@0.0.0 lint
+> eslint .
+
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\server.js
+  51:9  error  'process' is not defined  no-undef
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\src\App.jsx
+  161:22  error    'response' is defined but never used                                                                         no-unused-vars
+  262:6   warning  React Hook useEffect has a missing dependency: 'location'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\src\components\FarmerUpload.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\src\components\Login.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\src\components\OrderPage.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\src\components\PaymentPage.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Himanshu62047\OneDrive\Desktop\smart agri\src\components\ProductList.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 8 problems (7 errors, 1 warning)
+

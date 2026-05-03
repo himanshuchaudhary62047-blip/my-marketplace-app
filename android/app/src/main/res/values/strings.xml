@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SmartAgri</string>
+    <string name="title_activity_main">SmartAgri</string>
+    <string name="package_name">com.smartagri.app</string>
+    <string name="custom_url_scheme">com.smartagri.app</string>
+</resources>

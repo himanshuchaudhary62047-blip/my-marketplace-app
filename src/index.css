@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+:root {
+  --primary: #2d6a4f;
+  --primary-light: #52b788;
+  --primary-dark: #1b4332;
+  --accent: #d4e09b;
+  --bg: #f8faf8;
+  --white: #ffffff;
+  --text: #1b4332;
+  --gray: #666666;
+  --light-gray: #e8f5e9;
+  --danger: #ff4d4d;
+  --glass: rgba(255, 255, 255, 0.7);
+  --shadow-sm: 0 4px 12px rgba(45, 106, 79, 0.04);
+  --shadow-md: 0 10px 35px rgba(45, 106, 79, 0.08);
+  --shadow-lg: 0 20px 50px rgba(27, 67, 50, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Outfit', sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: radial-gradient(circle at center, #2d6a4f 0%, #1b4332 100%);
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  height: 100dvh;
+  background: var(--bg);
+  overflow-x: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+@media (min-width: 1024px) {
+  #root {
+    border-radius: 0;
+    border: none;
+  }
+}
+
+
+/* Custom Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+.content::-webkit-scrollbar { display: none; }
+
+/* Responsive media defaults */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+.content,
+.screen {
+  overflow-x: hidden;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: var(--shadow-lg);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #a0aec0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px;
+}
+
+.nav-item.active {
+  color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.nav-item.active .nav-icon {
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(45, 106, 79, 0.2);
+}
+
+.p-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.p-card:active {
+  transform: scale(0.96);
+}
+
+.animate-fade {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(45, 106, 79, 0.2);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.input-field {
+  width: 100%;
+  padding: 18px;
+  border: 2px solid #edf2ef;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  background: var(--white);
+  transition: all 0.3s ease;
+  color: var(--primary-dark);
+}
+
+.input-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.05);
+}
+
+.p-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.p-card:active {
+  transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 0.5s ease forwards;
+}
+
